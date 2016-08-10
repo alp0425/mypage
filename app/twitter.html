@@ -10,8 +10,13 @@
 	<title>Haochen Xu</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,200' rel='stylesheet' type='text/css'>
+	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> 
 
 	<link rel="shortcut icon" href="img/favicon.ico">
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> 
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -31,51 +36,110 @@
 	</div>
 	<div class = 'twittercontent banner'>
 		<h1 class = 'name'>Twitter Mood Monitor</h1>
-		<h2 class = 'goal'>The visualized Twitter sentiment analysis tool</h2>
+		<h2 class = 'goal'>A Twitter sentiment visualization tool</h2>
 
-		<img alt='twistencer' src="/img/tmm UI.png" >
+		<img alt='twistencer' src="/img/wordcloud.png" >
 	</div>
 	<div class = 'myRole'>	
-		<p>Twitter mood monitor is a graphic user interface which interprets the affective content from Twitter and allows user to access such information via visual representations. It was one of fun projects which ended up to be my master gruaduation project.  </p>
+		<p>Twitter mood monitor is a graphic user interface which interprets the affective content from Twitter and allows user to access such information via visual representations. I would like to pay tribut to my advisor Emmanuel G. Blanchard for giving me great advice during the process.  </p>
+
 	</div>
+
 
 	<div class = "content">
 
-		<p id = "title">Sentiment analysis</p>
-		<div class = "chapter">
+		<p id = "title">Motivation</p>
+		<div class = "project-content">
 			
-			<p>I did some research about the popular sentiment analysis approaches at that time. I chose to go for the affective dimensions. It was developed originally for the purpose of self-report emotion measurement. Psychologists can map out similar emotional experiences, which allow a visual depiction of the "emotional distance" between experiences. The emotional experiences are divided into two dimensions known as valences (how negative or positive the experience was) and arousal (extent of reaction to stimuli). I was lucky enough to get the raw data from the affective dimensions therefore this project was initiated. </p>
+			<p>I wish that I could say that I wanted to solve a real problem from this project. But my motivation was purely curiosity about people. I wanted to know more about people’s perceptions about different things. Then I thought about Twitter, it is the one social network that all about perceptions, opinions and feelings. It was started from a private fun project. It went further until it became my master thesis project. </p>
+
+			<svg width="33px" height="16px">
+			    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+			        <g id="Desktop-HD-Copy-2" transform="translate(-750.000000, -1672.000000)" fill="#8EE5FF">
+			            <g id="ic_arrow_drop_down" transform="translate(750.000000, 1672.000000)">
+			                <g id="Icon-24px">
+			                    <polygon id="Shape" points="0.875 0.25 16.5 15.875 32.125 0.25"></polygon>
+			                </g>
+			            </g>
+			        </g>
+			    </g>
+			</svg>
 
 		</div>
 
 
-		<p id ="title">System design</p>
-			<div class = "chapter">
-				<p>We built this instillation from the scratch. It was made from wood board, aluminum plate, plastics and sponges. We used the arduino board to control the sensors and music sequence. My role was circuit design and implementations. </p>
-				<div class = "bg2">
-					<div class ="twist image">
-						<img src="/img/twist pic 3.jpg">
-						<p>The first prototype</p>
-						<img src="/img/twist pic1.jpg">
-						<p>The second prtotype</p>
-						<img src="/img/twist pic 2.jpg">
-						<p>The thrid prototype</p>
+
+		<div class = "twitter-project process-steps">
+				<div class = "steps">
+					<div class = "left-text">
+						<h3>Concept</h3>
+						<p>I started from researching the avaliable Twitter sentiment analysis tools online. I quickly found out the majority of those tools only provide a binary answers, meaning the result is either good or bad. I in I wanted to give more sentiment dimensions and give more space for post analysis to my users.  </p>
+					</div>
+
+					<div class = "right-image">
+						<img src="img/tmm step 1.png">
 					</div>
 				</div>
+
+				<div class = "step-bar">
+					<img src="img/bar.png">
+				</div>
+
+				<!-- The first step ended-->
+
+				<div class = "steps">
+					<div class = "left-image">
+					</div>
+					<div class = "right-text">
+						<h3>System design</h3>
+						<p>I applied the k-mean classification to find the coordinate of each tweets on the canvas. But I was still not satisfied with the space of post interpretation that my users will have. Therefore, I also calculated the accuracy of each measurement to give my user an even richer picture. </p>
+					</div>
+				</div>
+
+				<div class = "step-bar">
+					<img src="img/bar.png">
+				</div>
+
+				<!-- The second step ended-->
+
+				<div class = "steps">
+					<div class = "right-text">
+						<h3>Interface Design</h3>
+						<p>User stated by searching an interesting topic in keywords. The retrieved tweets will then grouped and displayed on the sentiment canvas. The sentiment canvas was redesigned from the Russell dimensional model. </p>
+					</div>
+
+					<div class = "left-image">
+						<div class="fotorama" data-transition="crossfade" data-width="100%" data-allowfullscreen="true" data-ratio="400/284">
+							<img src="/img/tmm.png" data-caption = 'The first prototype'>
+							<img src="/img/tmm chart.png" data-caption = 'Modified Russell dimensional model'>
+				        </div>
+					</div>
+
+					<div class = "video-demo-button"> 
+						<a href="https://www.youtube.com/watch?v=QrijszmI-Sk" class = "button">VIDEO DEMO ></a>
+					</div>
+				</div>
+				<!-- The third step -->
+
+				<div class = "takeaway">
+
+				<div class = "space-50"></div>
+				
+				<div class = "step-bar">
+					<img src="img/takeaway bar.png">
+				</div>
+
+				<p class ="journey-title"> Journey Takeaways</p>
+				<p class = "journey-content">I don’t know much about sizing nor online shopping much before I join EasySize. The user interviews have definitely helped me a lot to get insights about our product design and directions. And it also gives huge motivation to learn new design and mockup tools to present my idea in high definition. 
+				</p>
+				
+				<div class = "step-bar">
+					<img src="img/takeaway bar.png">
+				</div>
+
+			</div>
+
 		</div>
-
-
-		<p id ="title">In action</p>
-			<div class = "chapter">
-				<p>The Roskilde festival was an extreme environment to test Twistencer. People wanted to have fun and boundary pushing. The Twistencer didn’t survive for 4 days program. But we have received good reviews from press and early users... <a href="https://roskilde-innovation.23video.com/video/664058/twistencer-p-roskilde-festival"> Read more</a> </p>
-
-		    </div>
-
-		    <div class = "chapter video">
-		    	<iframe width="800" height="455" src="https://www.youtube.com/embed/Pz3quJ_HBK4" frameborder="0" allowfullscreen></iframe>
-		    </div>
-
-
 	</div>
 
 

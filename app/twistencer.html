@@ -10,8 +10,12 @@
 	<title>Haochen Xu</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,200' rel='stylesheet' type='text/css'>
+	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> 
 
 	<link rel="shortcut icon" href="img/favicon.ico">
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -42,42 +46,98 @@
 	<div class = "content">
 
 		<p id = "title">The social icebreaker</p>
-		<div class = "chapter">
-			
-			<p>Twistenser is an interactive sound installation that was inspired by Twister (the board game) and sequencer (The electronic musical instrument). Music and board games are both great icebreaker at social event. Therefore we believe the Twistenser will bring people together on the Roskilde Festival.</p>
-		</div>
 
-		<div class = "chapter video">
+
+		<div class = "video">
 			<iframe src="//roskilde-innovation.23video.com/v.ihtml?source=share&photo%5fid=664058" width="800" height="445" frameborder="0" border="0" scrolling="no" allowfullscreen="1" mozallowfullscreen="1" webkitallowfullscreen="1"></iframe>
 
 		</div>
 
-
-		<p id ="title">Implementation</p>
-			<div class = "chapter">
-				<p>We built this instillation from the scratch. It was made from wood board, aluminum plate, plastics and sponges. We used the arduino board to control the sensors and music sequence. My role was circuit design and implementations. </p>
-				<div class = "bg2">
-					<div class ="twist image">
-						<img src="/img/twist pic 3.jpg">
-						<p>The first prototype</p>
-						<img src="/img/twist pic1.jpg">
-						<p>The second prtotype</p>
-						<img src="/img/twist pic 2.jpg">
-						<p>The thrid prototype</p>
-					</div>
-				</div>
+		<div class = "project-content">
+			
+			<p>Twistenser is an interactive sound installation that was inspired by Twister (the board game) and sequencer (The electronic musical instrument). Music and board games are both great icebreaker at social event. Therefore we believe the Twistenser will bring people together on the Roskilde Festival.</p>
+			
+			<svg width="33px" height="16px">
+			    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+			        <g id="Desktop-HD-Copy-2" transform="translate(-750.000000, -1672.000000)" fill="#FDBB9D">
+			            <g id="ic_arrow_drop_down" transform="translate(750.000000, 1672.000000)">
+			                <g id="Icon-24px">
+			                    <polygon id="Shape" points="0.875 0.25 16.5 15.875 32.125 0.25"></polygon>
+			                </g>
+			            </g>
+			        </g>
+			    </g>
+			</svg>
 		</div>
 
+		<!-- intro-ended -->
 
-		<p id ="title">In action</p>
-			<div class = "chapter">
-				<p>The Roskilde festival was an extreme environment to test Twistencer. People wanted to have fun and boundary pushing. The Twistencer didn’t survive after the 4 days program. But we have received good reviews from press and early users... <a href="https://roskilde-innovation.23video.com/video/664058/twistencer-p-roskilde-festival"> Read more</a> </p>
+
+		<div class = "twistenser-project process-steps">
+
+			<div class ="space-50"></div>
+			<div class = "steps">
+				<div class = "left-image">
+					<img src="/img/twist curcit.png">
+
+			    </div>
+
+			    <div class ="right-text">
+					<h3>Sensor Design</h3>
+					<p>I was taking charge of sensor design and implementation. Twistenser requires pressure sensor which send electric signal where user interact with it. The main obstacle that I was facing was the sensor load bearing issue. They have to be able to support human weight and still remain good conductivity. I looked into different materials and ends up to pick aluminium plate.</p>
+				</div>
+			</div>
+
+			<div class = "step-bar">
+				<img src="img/bar.png">
+			</div>
+			<!-- The first step ended -->
+		
+
+
+			<div class= "steps">
+				<div class = "left-text">
+					<h3>Prototypes</h3>
+					<p>We built this instillation from the scratch. It was made from wood board, aluminum plate, plastics and sponges. We used the arduino board to control the sensors and music sequence. We finished this project in 4 months from the concept design to the 3 working prototypes. We were having quite a few crazy deadlines, but I had great  fun for making this project :)</p>
+				</div>
+				<div class = "right-image">
+					<div class="fotorama" data-transition="crossfade" data-width="100%" data-allowfullscreen="true" data-ratio="400/284">
+						<img src="/img/twist intro.png" data-caption = 'Interface design'>
+						<img src="/img/twist pic 3.jpg" data-caption = 'The first prototype '>
+						<img src="/img/twist pic1.jpg" data-caption = 'The second prototype'>
+						<img src="/img/twist pic 2.jpg" data-caption = 'The third prototype'>
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- The second step ended -->
+
+		</div>
+		<!-- process ended -->
+			<div class = "takeaway">
+				<div class = "step-bar">
+					<img src="img/takeaway bar.png">
+				</div>
+
+				<p class = "journey-title"> Journey Takeaways</p>
+				<p class = "journey-content">We have received good reviews from press and early users. The Roskilde festival was a extreme environment for Twistencer. Sadly it did not survive after 4 days program... <a href="https://roskilde-innovation.23video.com/video/664058/twistencer-p-roskilde-festival"> Read more</a> </p>
+
+			    <div class = "video">
+			    	<iframe width="800" height="445" src="https://www.youtube.com/embed/PtqR_y_R2lM" frameborder="0" allowfullscreen></iframe>
+			    </div>
+
+				<div class = "step-bar">
+					<img src="img/takeaway bar.png">
+				</div>
 
 		    </div>
 
-		    <div class = "chapter video">
-		    	<iframe width="800" height="445" src="https://www.youtube.com/embed/PtqR_y_R2lM" frameborder="0" allowfullscreen></iframe>
-		    </div>
+
+
+		</div>
+		<!-- porcess ended -->
 
 
 	</div>
