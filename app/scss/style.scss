@@ -49,9 +49,10 @@ body {
 
 	.logo{
 		background-image: url('/img/logo.png');
-		opacity: 0.6;
+		opacity: 0.8;
 		width: 40px;
 		height: 40px;
+		background-size: cover;
 		&:hover{
 			opacity: 1;
 		}
@@ -303,6 +304,7 @@ body {
 			display: block;
 			margin: 0 auto;
 			opacity: .8;
+			width: 40px;
 			&:hover{
 			opacity: 1;
 			}

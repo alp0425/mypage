@@ -9,7 +9,17 @@ var gulp = require ('gulp'),
 	compass = require('gulp-compass'),
 	plumber = require('gulp-plumber'),
 	autoprefixer = require('gulp-autoprefixer'), 
+	del = require('del'),
 	rename = require('gulp-rename');
+	config = {
+		buildFilesFoldersRemove:[
+			'build/scss/', 
+			'build/js/!(*.min.js)',
+			'build/bower.json',
+			'build/bower_components/',
+			'build/maps/'
+		]
+	};
 
 // ///////////////////////////////////////////
 // Script Task
@@ -51,6 +61,33 @@ gulp.task('html', function(){
 	gulp.src('app/**/*.html')
 	.pipe(reload({stream: true}));
 });
+
+
+// ///////////////////////////////////////////
+// Build Task
+// ///////////////////////////////////////////
+
+// clean out all files and folders from build folder
+gulp.task('build:cleanfolder', function (cb) {
+	del([
+		'build/**'
+	], cb);
+});
+
+// task to create build directory of all files
+gulp.task('build:copy', ['build:cleanfolder'], function(){
+    return gulp.src('app/**/*/')
+    .pipe(gulp.dest('build/'));
+});
+
+// task to removed unwanted build files
+// list all files and directories here that you don't want included
+gulp.task('build:remove', ['build:copy'], function (cb) {
+	del(config.buildFilesFoldersRemove, cb);
+});
+
+gulp.task('build', ['build:copy', 'build:remove']);
+
 
 // ///////////////////////////////////////////
 // Browser-Sync Tasks
