@@ -606,9 +606,17 @@ body {
 	}
 
 	.video{
+		    position: relative;
+    		padding-bottom: 50.25%;
+    		padding-top: 35px;
+    		height: 0;
+    		overflow: hidden;
 		iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
-			//height: auto;
+			height: 100%;
 		}
 	}
 
@@ -692,12 +700,6 @@ body {
 			@include pad(3%);
 		}
 
-		.video{
-			iframe{
-				width: 84%;
-
-			}
-		}
 		.step-bar{
 			img{
 				width: auto;
